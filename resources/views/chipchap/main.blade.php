@@ -9,16 +9,16 @@
 
     <style>
         .profile-image {
-            width: 150px; /* Adjust the size as needed */
+            width: 150px; 
             height: 150px;
-            border-radius: 70%; /* Make it a circle */
-            overflow: hidden; /* Hide overflow content outside the circle */
-            margin: 20px; /* Center the image */
+            border-radius: 70%; 
+            overflow: hidden; 
+            margin: 20px;
         }
 
         .profile-text {
             max-width: 800px;
-            margin-left: 20px; /* Adjust the margin as needed */
+            margin-left: 20px;
         }
     </style>
 
