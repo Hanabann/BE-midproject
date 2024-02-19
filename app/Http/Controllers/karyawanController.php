@@ -12,6 +12,11 @@ class karyawanController extends Controller
         return view('chipchap.main', compact('karyawans')); //nama file di view
     }
 
+    public function view(){
+        $karyawans = karyawan::all();
+        return view('chipchap.view', compact('karyawans')); //nama file di view
+    }
+
     public function add(){
         return view('chipchap.add'); //nama file di view
     }
@@ -27,11 +32,16 @@ class karyawanController extends Controller
         $newData = karyawan::create($data); //membuat data dari $data
 
         //redirect setelah add data
-        return redirect(route('karyawan.main'))->with('success','Berhasil menambahkan data karyawan');;
+        return redirect(route('karyawan.view'))->with('success','Berhasil menambahkan data karyawan');;
     }
 
     public function edit(karyawan $karyawan){
         return view('chipchap.edit', compact('karyawan'));
+    }
+
+    public function change(){
+        $karyawans = karyawan::all();
+        return view('chipchap.change', compact('karyawans')); //nama file di view
     }
 
     public function update(karyawan $karyawan, Request $request){
@@ -44,12 +54,12 @@ class karyawanController extends Controller
 
         $karyawan->update($data);
 
-        return redirect(route('karyawan.main'))->with('success','Berhasil memmperbaharui data karyawan');
+        return redirect(route('karyawan.change'))->with('success','Berhasil memperbaharui data karyawan');
     }
 
     public function delete(karyawan $karyawan){
         $karyawan->delete();
-        return redirect(route('karyawan.main'))->with('success','Berhasil menghapus data karyawan');
+        return redirect(route('karyawan.change'))->with('success','Berhasil menghapus data karyawan');
     }
 
 }

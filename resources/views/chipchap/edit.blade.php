@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=h, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Memperbarui Karyawan</title>
+    <title>Update Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="container mt-4">
     {{-- judul utama pada web --}}
     <div class="text-center">
-        <p class="h1 fw-bolder">PT Chipi Chapa</p>
+        <p class="h1 fw-bolder">PT X</p>
         <p class="h3 mb-4">Data Karyawan</p>
     </div>
 
@@ -20,7 +20,9 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active fw-medium" aria-current="page" href="{{route('karyawan.main')}}">Home</a>
+                    <a class="nav-link" href="{{route('karyawan.main')}}">Home</a>
+                    <a class="nav-link" href="{{route('karyawan.view')}}">View Data</a>
+                    <a class="nav-link active fw-medium" aria-current="page" href="{{route('karyawan.change')}}">Change Data</a>
                     <a class="nav-link" href="{{route('karyawan.add')}}">Tambah Karyawan Baru</a>
                 </div>
           </div>
